@@ -1,0 +1,57 @@
+<html>
+<head>
+  <style>
+
+</style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ 
+<form>
+  <div>
+    <input type="radio" name="fruit" value="orange" id="orange">
+    <label for="orange">orange</label>
+  </div>
+  <div>
+    <input type="radio" name="fruit" value="apple" id="apple">
+    <label for="apple">apple</label>
+  </div>
+  <div>
+    <input type="radio" name="fruit" value="banana" id="banana">
+    <label for="banana">banana</label>
+  </div>
+  <div id="log"></div>
+</form>
+ 
+<a onclick="toggle(hidden_content)">Ссылочка</a>
+
+<div id="hidden_content" style="display: none;">Вот он я</div>
+
+
+ 
+
+    
+
+
+
+
+
+
+<script>
+
+function toggle(el) {
+
+el.style.display = (el.style.display == 'none') ? '' : 'none'
+
+}
+
+</script>
+
+<script>
+$( "input" ).on( "click", function() {
+  $("#log" ).html( $("input:checked").val() + " is checked!" );
+});
+</script>
+ 
+</body>
+</html>
